@@ -1,0 +1,13 @@
+---
+- name: I open "website"
+  uid: 4df6cee5-638e-44be-b4dc-d3795ff5300c
+  parameters:
+  - name: website
+- name: I search for "query"
+  uid: 20dfb0fe-1d52-4474-a40a-d627ae47b7dc
+  parameters:
+  - name: query
+- name: '"site" appears in the first page'
+  uid: cccd4310-286f-4f8f-8aa4-fd941fe7209e
+  parameters:
+  - name: site
