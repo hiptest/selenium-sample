@@ -14,3 +14,6 @@ hs_err_pid*
 target/
 selenium_standalone/
 src/test/resources/
+
+src/test/java/com/example/Actionwords.java
+src/test/java/com/example/projectTest.java

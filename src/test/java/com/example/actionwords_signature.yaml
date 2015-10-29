@@ -1,0 +1,13 @@
+---
+- name: I open "p1"
+  uid: ea4373d4-6cf9-4f77-b671-0d6dc43dbc83
+  parameters:
+  - name: p1
+- name: I search for "p1"
+  uid: 12052e91-e541-428d-ad26-cffef9163297
+  parameters:
+  - name: p1
+- name: a link to "p1" is shown in the results
+  uid: 4584d13a-c12c-4225-97d6-bdf6fa89c91a
+  parameters:
+  - name: p1
