@@ -1,5 +1,6 @@
 Hiptest/Selenium-samples
 ========================
+[![Build Status](https://travis-ci.org/hiptest/selenium-sample.svg)](https://travis-ci.org/hiptest/selenium-sample)
 
 This is a simple example on how to automate tests written in [Hiptest](http://hiptest.net) with Java and Selenium.
 
