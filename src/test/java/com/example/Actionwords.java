@@ -31,7 +31,6 @@ public class Actionwords {
 
       (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
           public Boolean apply(WebDriver d) {
-              System.out.println(d.findElements(By.linkText(matcher)).size());
               return d.findElements(By.linkText(matcher)).size() != 0;
           }
       });
