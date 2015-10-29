@@ -1,27 +1,29 @@
 package com.example;
-import com.thoughtworks.selenium.Selenium;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverBackedSelenium;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class Actionwords {
-    private Selenium selenium;
+    private WebDriver driver;
 
-    Actionwords(WebDriver d) {
-      selenium = new WebDriverBackedSelenium(d, "http://www.google.fr");
+    Actionwords() {
+      driver = new FirefoxDriver();
     }
 
     public void iOpenWebsite(String website) {
-      selenium.open(website);
-      selenium.waitForPageToLoad("");
+      driver.get(website);
     }
 
     public void iSearchForQuery(String query) {
-      selenium.type("name=q", query);
-      selenium.submit("name=f");
+      WebElement element = driver.findElement(By.name("q"));
+      element.clear();
+      element.sendKeys(query);
+      element.submit();
     }
 
     public void siteAppearsInTheFirstPage(String site) {
-
     }
 }
