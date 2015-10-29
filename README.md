@@ -1,7 +1,8 @@
-hiptest/Selenium-samples
+Hiptest/Selenium-samples
 ========================
 
 This is a simple example on how to automate tests written in [Hiptest](http://hiptest.net) with Java and Selenium.
+
 
 Acknowledgments
 ---------------

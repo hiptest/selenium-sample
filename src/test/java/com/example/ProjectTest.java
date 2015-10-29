@@ -1,19 +1,14 @@
 package com.example;
 
-import org.junit.Before;
 import junit.framework.TestCase;
 
 public class ProjectTest extends TestCase {
-    public Actionwords actionwords;
 
-    @Before
-    public void setUp() throws Exception {
-      actionwords = new Actionwords();
-    }
+    public Actionwords actionwords = new Actionwords();
 
-    public void testSimpleTest() {
-      actionwords.iOpenWebsite("http://google.fr");
-      actionwords.iSearchForQuery("La poste");
-      actionwords.siteAppearsInTheFirstPage("laposte.fr");
+    public void testFindingASiteOnHiptest() {
+        actionwords.iOpenP1("http://google.com");
+        actionwords.iSearchForP1("Hiptest");
+        actionwords.aLinkToP1IsShownInTheResults("Hiptest - Agile test management tool");
     }
 }

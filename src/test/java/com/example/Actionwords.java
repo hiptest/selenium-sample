@@ -5,6 +5,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 
 public class Actionwords {
     private WebDriver driver;
@@ -13,17 +15,25 @@ public class Actionwords {
       driver = new FirefoxDriver();
     }
 
-    public void iOpenWebsite(String website) {
-      driver.get(website);
+    public void iOpenP1(String p1) {
+      driver.get(p1);
     }
 
-    public void iSearchForQuery(String query) {
+    public void iSearchForP1(String p1) {
       WebElement element = driver.findElement(By.name("q"));
       element.clear();
-      element.sendKeys(query);
+      element.sendKeys(p1);
       element.submit();
     }
 
-    public void siteAppearsInTheFirstPage(String site) {
+    public void aLinkToP1IsShownInTheResults(String p1) {
+      final String matcher = p1;
+
+      (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+          public Boolean apply(WebDriver d) {
+              System.out.println(d.findElements(By.linkText(matcher)).size());
+              return d.findElements(By.linkText(matcher)).size() != 0;
+          }
+      });
     }
 }
