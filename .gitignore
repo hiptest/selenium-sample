@@ -12,3 +12,5 @@
 hs_err_pid*
 
 target/
+selenium_standalone/
+src/test/resources/
